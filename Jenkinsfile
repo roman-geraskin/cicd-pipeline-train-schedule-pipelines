@@ -1,11 +1,4 @@
-properties([
-    pipelineTriggers([
-      [$class: "GitHubPushTrigger"]
-    ])
-  ])
-
 pipeline {
-  checkout scm
   agent any
   stages {
     stage ("Build") {
