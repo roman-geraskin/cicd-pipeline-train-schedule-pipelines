@@ -5,9 +5,9 @@ properties([
   ])
 
 pipeline {
-  checkout scm
   agent any
   stages {
+    checkout scm
     stage ("Build") {
       when {
         branch 'master'
